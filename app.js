@@ -10,7 +10,7 @@ const gameStart = () => {
 
     const userInput = prompt("Choose your tool (rock, paper, or scissors), or type 'quit' to exit: ");
     if (userInput.toLowerCase() === "quit") {
-        console.log("Thanks for playing! Final scores: ", { "wins": wins, "losses": losses, "draws": draws });
+        console.log("Thanks for playing! Final scores: ", { "Wins": wins, "Losses": losses, "Draws": draws });
         return;
     }
 
@@ -24,15 +24,15 @@ const gameStart = () => {
         case "rock":
             switch (response) {
                 case "rock":
-                    console.log(colour.yellow("Draw"));
+                    console.log(colour.yellow("I chose Rock too: it's a Draw!"));
                     ++draws;
                     break;
                 case "paper":
-                    console.log(colour.red("Loss"));
+                    console.log(colour.red("I chose Paper: you Lost!"));
                     ++losses;
                     break;
                 case "scissors":
-                    console.log(colour.green("Win"));
+                    console.log(colour.green("I chose Scissors: you Win!"));
                     ++wins;
                     break;
             }
@@ -40,15 +40,15 @@ const gameStart = () => {
         case "paper":
             switch (response) {
                 case "rock":
-                    console.log(colour.green("Win"));
+                    console.log(colour.green("I chose Rock: you Win!"));
                     ++wins;
                     break;
                 case "paper":
-                    console.log(colour.yellow("Draw"));
+                    console.log(colour.yellow("I chose Paper too: its a Draw!"));
                     ++draws;
                     break;
                 case "scissors":
-                    console.log(colour.red("Loss"));
+                    console.log(colour.red("I chose Scissors: you Lost!"));
                     ++losses;
                     break;
             }
@@ -56,22 +56,22 @@ const gameStart = () => {
         case "scissors":
             switch (response) {
                 case "rock":
-                    console.log(colour.red("Loss"));
+                    console.log(colour.red("I chose Rock: you Lost!"));
                     ++losses;
                     break;
                 case "paper":
-                    console.log(colour.green("Win"));
+                    console.log(colour.green("I chose Paper: you Win!"));
                     ++wins;
                     break;
                 case "scissors":
-                    console.log(colour.yellow("Draw"));
+                    console.log(colour.yellow("I chose Scissors too: its a Draw!"));
                     ++draws;
                     break;
             }
             break;
     }
 
-    console.log("Current scores, ", { "wins": wins, "losses": losses, "draws": draws });
+    console.log("Current scores, ", { "Wins": wins, "Losses": losses, "Draws": draws });
     gameStart();
 }
 
